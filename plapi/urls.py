@@ -18,11 +18,12 @@ from django.contrib import admin
 
 from rest_framework import routers
 
-from core.viewsets import ProgrammingLanguageViewSet
+from core.viewsets import ProgrammingLanguageViewSet, ParadigmViewSet
 
 
 router = routers.DefaultRouter()
 router.register(r'programming-languages', ProgrammingLanguageViewSet)
+router.register(r'paradigms', ParadigmViewSet)
 
 
 urlpatterns = [
