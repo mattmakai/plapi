@@ -9,9 +9,13 @@ class Library(models.Model):
     """
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=64, unique=True)
+    summary = models.TextField()
     homepage_url = models.URLField(max_length=1024)
     language = models.ForeignKey("ProgrammingLanguage")
     is_visible = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.name
 
 
 class ProgrammingLanguage(models.Model):
@@ -22,7 +26,11 @@ class ProgrammingLanguage(models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=64, unique=True)
     homepage_url = models.URLField(max_length=1024)
+    summary = models.TextField()
     is_visible = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.name
 
 
 class Paradigm(models.Model):
@@ -31,7 +39,11 @@ class Paradigm(models.Model):
     """
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=64, unique=True)
+    summary = models.TextField()
     is_visible = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.name
 
 
 class Tutorial(models.Model):
@@ -41,7 +53,11 @@ class Tutorial(models.Model):
     """
     name = models.CharField(max_length=1024)
     slug = models.SlugField(max_length=64, unique=True)
+    summary = models.TextField()
     homepage_url = models.URLField(max_length=2048)
     language = models.ForeignKey("ProgrammingLanguage")
     is_visible = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.name
 

@@ -23,10 +23,10 @@ from core.viewsets import (LibraryViewSet, ProgrammingLanguageViewSet,
 
 
 router = routers.DefaultRouter()
-router.register(r'library', LibraryViewSet)
+router.register(r'libraries', LibraryViewSet)
 router.register(r'programming-languages', ProgrammingLanguageViewSet)
 router.register(r'paradigms', ParadigmViewSet)
-router.register(r'tutorial', TutorialViewSet)
+router.register(r'tutorials', TutorialViewSet)
 
 
 urlpatterns = [
