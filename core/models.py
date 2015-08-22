@@ -1,11 +1,26 @@
 from django.db import models
 
 
-class Library(models.Model):
+class Concept(models.Model):
     """
-        A code collection written for a specific language and purpose
-        that makes implementing some goal easier. For example, Django is
-        a library that eases creating Python web applications.
+        A conceptual idea related to programming, such as web application
+        framework, task queue, file system or concurrency model.
+    """
+    name = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=64, unique=True)
+    summary = models.TextField()
+    language = models.ManyToManyField("ProgrammingLanguage")
+    is_visible = models.BooleanField(default=False)
+
+    def __str(self):
+        return self.name
+
+
+class Implementation(models.Model):
+    """
+        An implementation of a conceptual idea in a particular programming
+        language represented as a code collection. For example, Django is
+        an implementation of the web application framework concept.
     """
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=64, unique=True)
@@ -14,7 +29,7 @@ class Library(models.Model):
     language = models.ForeignKey("ProgrammingLanguage")
     is_visible = models.BooleanField(default=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -29,7 +44,7 @@ class ProgrammingLanguage(models.Model):
     summary = models.TextField()
     is_visible = models.BooleanField(default=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -42,7 +57,7 @@ class Paradigm(models.Model):
     summary = models.TextField()
     is_visible = models.BooleanField(default=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -58,6 +73,6 @@ class Tutorial(models.Model):
     language = models.ForeignKey("ProgrammingLanguage")
     is_visible = models.BooleanField(default=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 

@@ -1,12 +1,20 @@
 from rest_framework import serializers
 
-from core.models import Library, ProgrammingLanguage, Paradigm, Tutorial
+from core.models import (Concept, Implementation, ProgrammingLanguage,
+                         Paradigm, Tutorial,)
 
 
-class LibrarySerializer(serializers.HyperlinkedModelSerializer):
+class ConceptSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Library
-        fields = ('name', 'slug', 'homepage_url', 'language', 'summary',)
+        model = Concept
+        fields = ('name', 'slug', 'language', 'summary',)
+
+
+class ImplementationSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Implementation
+        fields = ('name', 'slug', 'language', 'summary',)
+
 
 class ProgrammingLanguageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
