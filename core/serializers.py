@@ -1,7 +1,12 @@
 from rest_framework import serializers
 
-from core.models import ProgrammingLanguage, Paradigm
+from core.models import Library, ProgrammingLanguage, Paradigm, Tutorial
 
+
+class LibrarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Library
+        fields = ('name', 'slug', 'homepage_url', 'language',)
 
 class ProgrammingLanguageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -12,5 +17,11 @@ class ProgrammingLanguageSerializer(serializers.HyperlinkedModelSerializer):
 class ParadigmSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Paradigm
-        fields = ('name', 'slug')
+        fields = ('name', 'slug', 'language',)
+
+
+class TutorialSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Tutorial
+        fields = ('name', 'slug', 'homepage_url', 'language',)
 
