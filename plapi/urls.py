@@ -18,12 +18,14 @@ from django.contrib import admin
 
 from rest_framework import routers
 
-from core.viewsets import (LibraryViewSet, ProgrammingLanguageViewSet,
+from core.viewsets import (ConceptViewSet, ImplementationViewSet,
+                           ProgrammingLanguageViewSet,
                            ParadigmViewSet, TutorialViewSet,)
 
 
 router = routers.DefaultRouter()
-router.register(r'libraries', LibraryViewSet)
+router.register(r'concepts', ConceptViewSet)
+router.register(r'implementations', ImplementationViewSet)
 router.register(r'programming-languages', ProgrammingLanguageViewSet)
 router.register(r'paradigms', ParadigmViewSet)
 router.register(r'tutorials', TutorialViewSet)
