@@ -18,9 +18,9 @@ from django.contrib import admin
 
 from rest_framework import routers
 
-from core.viewsets import (ConceptViewSet, ImplementationViewSet,
-                           ProgrammingLanguageViewSet,
-                           ParadigmViewSet, TutorialViewSet,)
+from languages.viewsets import (ConceptViewSet, ImplementationViewSet,
+                                ProgrammingLanguageViewSet,
+                                ParadigmViewSet, TutorialViewSet,)
 
 
 router = routers.DefaultRouter()

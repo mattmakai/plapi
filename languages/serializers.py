@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from core.models import (Concept, Implementation, ProgrammingLanguage,
-                         Paradigm, Tutorial,)
+from .models import (Concept, Implementation, ProgrammingLanguage,
+                     Paradigm, Tutorial,)
 
 
 class ConceptSerializer(serializers.HyperlinkedModelSerializer):
