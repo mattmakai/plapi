@@ -1,4 +1,6 @@
-Django==1.8.3
+dj-database-url==0.3.0
+Django==1.8.4
 django-filter==0.11.0
-djangorestframework==3.2.2
+djangorestframework==3.2.4
 Markdown==2.6.2
+psycopg2==2.6.1
