@@ -1,16 +1,10 @@
 from django.contrib import admin
 
-from .models import (Concept, Implementation, ProgrammingLanguage, Paradigm,
-                     Tutorial,)
+from .models import Library, ProgrammingLanguage, Tutorial
 
 
-@admin.register(Concept)
-class ConceptAdmin(admin.ModelAdmin):
-    list_display = ('name', 'is_visible')
-
-
-@admin.register(Implementation)
-class ImplementationAdmin(admin.ModelAdmin):
+@admin.register(Library)
+class LibraryAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_visible')
 
 
@@ -19,12 +13,6 @@ class ProgrammingLanguageAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_visible')
 
 
-@admin.register(Paradigm)
-class ParadigmAdmin(admin.ModelAdmin):
-    list_display = ('name', 'is_visible')
-
-
 @admin.register(Tutorial)
 class TutorialAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_visible')
-

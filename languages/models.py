@@ -1,26 +1,13 @@
 from django.db import models
 
+from taggit.managers import TaggableManager
 
-class Concept(models.Model):
+
+class Library(models.Model):
     """
-        A conceptual idea related to programming, such as web application
-        framework, task queue, file system or concurrency model.
-    """
-    name = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=64, unique=True)
-    summary = models.TextField()
-    language = models.ManyToManyField("ProgrammingLanguage")
-    is_visible = models.BooleanField(default=False)
-
-    def __str(self):
-        return self.name
-
-
-class Implementation(models.Model):
-    """
-        An implementation of a conceptual idea in a particular programming
-        language represented as a code collection. For example, Django is
-        an implementation of the web application framework concept.
+        A code library that implements some conceptual idea. For example,
+        Django is an implementation of the web application framework
+        concept.
     """
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=64, unique=True)
@@ -28,6 +15,8 @@ class Implementation(models.Model):
     homepage_url = models.URLField(max_length=1024)
     language = models.ForeignKey("ProgrammingLanguage")
     is_visible = models.BooleanField(default=False)
+
+    tags = TaggableManager()
 
     def __str__(self):
         return self.name
@@ -44,18 +33,7 @@ class ProgrammingLanguage(models.Model):
     summary = models.TextField()
     is_visible = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.name
-
-
-class Paradigm(models.Model):
-    """
-        A programming paradigm, such as imperative or functional.
-    """
-    name = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=64, unique=True)
-    summary = models.TextField()
-    is_visible = models.BooleanField(default=False)
+    tags = TaggableManager()
 
     def __str__(self):
         return self.name
@@ -72,6 +50,8 @@ class Tutorial(models.Model):
     homepage_url = models.URLField(max_length=2048)
     language = models.ForeignKey("ProgrammingLanguage")
     is_visible = models.BooleanField(default=False)
+
+    tags = TaggableManager()
 
     def __str__(self):
         return self.name

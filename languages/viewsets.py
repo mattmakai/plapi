@@ -1,30 +1,18 @@
 from rest_framework import viewsets
 
-from .models import (Concept, Implementation, ProgrammingLanguage,
-                     Paradigm, Tutorial)
-from .serializers import (ConceptSerializer, ImplementationSerializer,
-                          ProgrammingLanguageSerializer, ParadigmSerializer,
+from .models import Library, ProgrammingLanguage, Tutorial
+from .serializers import (LibrarySerializer, ProgrammingLanguageSerializer,
                           TutorialSerializer)
 
 
-class ConceptViewSet(viewsets.ModelViewSet):
-    queryset = Concept.objects.filter(is_visible=True)
-    serializer_class = ConceptSerializer
-
-
-class ImplementationViewSet(viewsets.ModelViewSet):
-    queryset = Implementation.objects.filter(is_visible=True)
-    serializer_class = ImplementationSerializer
+class LibraryViewSet(viewsets.ModelViewSet):
+    queryset = Library.objects.filter(is_visible=True)
+    serializer_class = LibrarySerializer
 
 
 class ProgrammingLanguageViewSet(viewsets.ModelViewSet):
     queryset = ProgrammingLanguage.objects.filter(is_visible=True)
     serializer_class = ProgrammingLanguageSerializer
-
-
-class ParadigmViewSet(viewsets.ModelViewSet):
-    queryset = Paradigm.objects.filter(is_visible=True)
-    serializer_class = ParadigmSerializer
 
 
 class TutorialViewSet(viewsets.ModelViewSet):
