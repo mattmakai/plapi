@@ -16,21 +16,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from rest_framework import routers
-
-from languages.viewsets import (LibraryViewSet, ProgrammingLanguageViewSet,
-                                TutorialViewSet,)
-
-
-router = routers.DefaultRouter()
-router.register(r'libraries', LibraryViewSet)
-router.register(r'programming-languages', ProgrammingLanguageViewSet)
-router.register(r'tutorials', TutorialViewSet)
+from languages.views import (api_root, ProgrammingLanguageList,)
+#                             ProgrammingLanguageDetail)
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
-    url(r'^', include(router.urls)),
+    url(r'^programming-languages/$', ProgrammingLanguageList.as_view(),
+        name="programming-languages"),
+    #url(r'^programming-languages/(?P<slug>[a-z0-9\-]+)/$',
+    #    ProgrammingLanguageList.as_view()),
+    url(r'^$', api_root),
 ]
