@@ -17,7 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from languages.views import (api_root, LanguageList, LanguageDetail,
-                             TutorialDetail)
+                             TutorialDetail, TutorialList)
 
 
 urlpatterns = [
@@ -29,6 +29,8 @@ urlpatterns = [
         name="programming-languages"),
     url(r'^tutorials/(?P<slug>[a-z0-9\-]+)/$',
         TutorialDetail.as_view(), name='tutorial-detail'),
+    url(r'^tutorials/$', TutorialList.as_view(),
+        name="tutorials"),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', api_root),
 ]

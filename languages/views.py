@@ -13,6 +13,7 @@ def api_root(request, format=None):
     return Response({
         'programming-languages': reverse('programming-languages',
                                          request=request, format=format),
+        'tutorials': reverse('tutorials', request=request, format=format),
     })
 
 
@@ -36,6 +37,16 @@ class LanguageDetail(APIView):
     def get(self, request, slug, format=None):
         language = self.get_object(slug)
         serializer = LanguageSerializer(language,
+                                        context={'request': request})
+        return Response(serializer.data)
+
+
+class TutorialList(APIView):
+    queryset = Tutorial.objects.filter(is_visible=True)
+
+    def get(self, request, format=None):
+        tutorials = Tutorial.objects.filter(is_visible=True)
+        serializer = TutorialSerializer(tutorials, many=True,
                                         context={'request': request})
         return Response(serializer.data)
 
