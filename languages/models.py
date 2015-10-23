@@ -13,7 +13,7 @@ class Library(models.Model):
     slug = models.SlugField(max_length=64, unique=True)
     summary = models.TextField()
     homepage_url = models.URLField(max_length=1024)
-    language = models.ForeignKey("ProgrammingLanguage")
+    language = models.ForeignKey("Language")
     is_visible = models.BooleanField(default=False)
 
     tags = TaggableManager()
@@ -22,7 +22,7 @@ class Library(models.Model):
         return self.name
 
 
-class ProgrammingLanguage(models.Model):
+class Language(models.Model):
     """
         A programming language, such as Python or C, and related
         information on it.
@@ -48,7 +48,7 @@ class Tutorial(models.Model):
     slug = models.SlugField(max_length=64, unique=True)
     summary = models.TextField()
     homepage_url = models.URLField(max_length=2048)
-    language = models.ForeignKey("ProgrammingLanguage")
+    language = models.ForeignKey("Language")
     is_visible = models.BooleanField(default=False)
 
     tags = TaggableManager()

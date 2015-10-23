@@ -4,8 +4,8 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.views import APIView
 
-from .models import ProgrammingLanguage
-from .serializers import ProgrammingLanguageSerializer
+from .models import Language
+from .serializers import LanguageSerializer
 
 
 @api_view(('GET',))
@@ -13,14 +13,29 @@ def api_root(request, format=None):
     return Response({
         'programming-languages': reverse('programming-languages',
                                          request=request, format=format),
-        #'snippets': reverse('snippet-list', request=request, format=format)
     })
 
 
-class ProgrammingLanguageList(APIView):
-    queryset = ProgrammingLanguage.objects.filter(is_visible=True)
+class LanguageList(APIView):
+    queryset = Language.objects.filter(is_visible=True)
 
     def get(self, request, format=None):
-        languages = ProgrammingLanguage.objects.filter(is_visible=True)
-        serializer = ProgrammingLanguageSerializer(languages, many=True)
+        languages = Language.objects.filter(is_visible=True)
+        serializer = LanguageSerializer(languages, many=True,
+                                        context={'request': request})
         return Response(serializer.data)
+
+
+class LanguageDetail(APIView):
+    def get_object(self, slug):
+        try:
+            return Language.objects.filter(slug=slug).first()
+        except Language.DoesNotExist:
+            raise Http404
+
+    def get(self, request, slug, format=None):
+        language = self.get_object(slug)
+        serializer = LanguageSerializer(language,
+                                        context={'request': request})
+        return Response(serializer.data)
+
