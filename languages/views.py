@@ -4,8 +4,8 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.views import APIView
 
-from .models import Language
-from .serializers import LanguageSerializer
+from .models import Language, Tutorial
+from .serializers import LanguageSerializer, TutorialSerializer
 
 
 @api_view(('GET',))
@@ -36,6 +36,20 @@ class LanguageDetail(APIView):
     def get(self, request, slug, format=None):
         language = self.get_object(slug)
         serializer = LanguageSerializer(language,
+                                        context={'request': request})
+        return Response(serializer.data)
+
+
+class TutorialDetail(APIView):
+    def get_object(self, slug):
+        try:
+            return Tutorial.objects.filter(slug=slug).first()
+        except Tutorial.DoesNotExist:
+            raise Http404
+
+    def get(self, request, slug, format=None):
+        tutorial = self.get_object(slug)
+        serializer = TutorialSerializer(tutorial,
                                         context={'request': request})
         return Response(serializer.data)
 

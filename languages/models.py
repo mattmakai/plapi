@@ -48,7 +48,7 @@ class Tutorial(models.Model):
     slug = models.SlugField(max_length=64, unique=True)
     summary = models.TextField()
     homepage_url = models.URLField(max_length=2048)
-    language = models.ForeignKey("Language")
+    language = models.ForeignKey("Language", related_name="tutorials")
     is_visible = models.BooleanField(default=False)
 
     tags = TaggableManager()

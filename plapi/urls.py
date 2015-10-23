@@ -16,16 +16,19 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from languages.views import (api_root, LanguageList, LanguageDetail)
+from languages.views import (api_root, LanguageList, LanguageDetail,
+                             TutorialDetail)
 
 
 urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
     url(r'^programming-languages/(?P<slug>[a-z0-9\-]+)/$',
-        LanguageDetail.as_view(), name='language_detail'),
+        LanguageDetail.as_view(), name='language-detail'),
     url(r'^programming-languages/$', LanguageList.as_view(),
         name="programming-languages"),
+    url(r'^tutorials/(?P<slug>[a-z0-9\-]+)/$',
+        TutorialDetail.as_view(), name='tutorial-detail'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', api_root),
 ]
