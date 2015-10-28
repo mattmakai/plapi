@@ -13,9 +13,7 @@
   template: src=env.j2
             dest={{ app_dir }}/.env
 
-- name: sync the database tables between Flask and PostgreSQL
-  shell: ". {{ app_dir }}/.env; {{ venv_python }} {{ app_dir }}/manage.py syncdb"
-
-- name: create the initial admin user in the database
-  shell: ". {{ app_dir }}/.env; {{ venv_python }} {{ app_dir}}/manage.py create_wizard {{ app_admin_user }} {{ app_admin_password }}"
+- name: sync the database tables between Django and PostgreSQL
+  - django_manage: command=syncdb app_path={{ app_dir }}
+      settings={{ settings_app_name }} virtualenv={{ venv_dir }} 
 

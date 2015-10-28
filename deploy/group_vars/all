@@ -37,6 +37,7 @@ db_user: "{{ deploy_user }}"
 # Chapter 7: Application Dependencies
 venv_dir: "/home/{{ deploy_user }}/venvs/{{ app_name }}"
 venv_python: "{{venv_dir}}/bin/python"
+settings_app_name: "{{ app_name }}.settings"
 wsgi_env_vars: {
     ## in production you'll likely want to set this to False
     DEBUG: False,
