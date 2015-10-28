@@ -1,2 +1,2 @@
 [common]
-api.plapi.io ansible_sudo_pass="{{ deploy_user_password }}"
+45.33.94.211 ansible_sudo_pass="{{ deploy_user_password }}"

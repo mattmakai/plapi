@@ -70,7 +70,7 @@ app_admin_password: ''
 deployment_alert: true
 ## your phone number that should receive a deployment complete
 ## text message. example format: "+19735551234"
-alert_number: "{{ lookup('env', 'ALERT_PHONE_NUMBER') }}",
+alert_number: "{{ lookup('env', 'ALERT_PHONE_NUMBER') }}"
 
 
 # Chapter 10: Continuous Integration

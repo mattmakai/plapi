@@ -14,6 +14,6 @@
             dest={{ app_dir }}/.env
 
 - name: sync the database tables between Django and PostgreSQL
-  - django_manage: command=syncdb app_path={{ app_dir }}
-      settings={{ settings_app_name }} virtualenv={{ venv_dir }} 
+  django_manage: command=syncdb app_path={{ app_dir }}
+                 settings={{ settings_app_name }} virtualenv={{ venv_dir }}
 
