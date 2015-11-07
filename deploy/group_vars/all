@@ -55,6 +55,7 @@ wsgi_env_vars: {
     TWILIO_NUMBER: "{{ lookup('env', 'TWILIO_NUMBER') }}",
     CELERY_BROKER_URL: 'redis://localhost:6379/0',
     CELERY_RESULT_BACKEND: 'redis://localhost:6379/0',
+    STATIC_URL: '//static.plapi.io/',
 }
 ## username you want to use to log into app's admin screen
 app_admin_user: ''
