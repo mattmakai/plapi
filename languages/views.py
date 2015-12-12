@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.template.defaultfilters import slugify
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -39,6 +41,19 @@ class LanguageDetail(APIView):
         serializer = LanguageSerializer(language,
                                         context={'request': request})
         return Response(serializer.data)
+
+    def post(self, request, format=None):
+        serializer = LanguageSerializer(data=request.data,
+                                        context={'request': request})
+        if serializer.is_valid():
+            slug = slugify(serializer.validated_data['name'])
+            serializer.save(slug=slug, is_visible=False)
+            language = Language.objects.filter(slug=slug).first()
+            serializer = LanguageSerializer(language,
+                                            context={'request': request})
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors,
+                        status=status.HTTP_400_BAD_REQUEST)
 
 
 class TutorialList(APIView):
