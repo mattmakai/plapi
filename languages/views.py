@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.template.defaultfilters import slugify
+from django.http import Http404
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -32,9 +33,13 @@ class LanguageList(APIView):
 class LanguageDetail(APIView):
     def get_object(self, slug):
         try:
-            return Language.objects.filter(slug=slug).first()
+            language = Language.objects.filter(slug=slug,
+                                               is_visible=True).first()
         except Language.DoesNotExist:
             raise Http404
+        if language is None:
+            raise Http404
+        return lang
 
     def get(self, request, slug, format=None):
         language = self.get_object(slug)
