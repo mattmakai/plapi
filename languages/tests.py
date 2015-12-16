@@ -1,11 +1,24 @@
 from django.test import TestCase
 from rest_framework.test import APIRequestFactory, APITestCase
-from .views import LanguageDetail
+from .views import LanguageDetail, api_root
 from .models import Language
 
 
 emerald = {'name': 'Emerald', 'summary': 'A combination of Python and Ruby.',
            'homepage_url': 'http://www.fullstackpython.com/'}
+
+
+class APIRootTest(APITestCase):
+    def setUp(self):
+        self.factory = APIRequestFactory()
+
+
+    def test_api_root(self):
+        request = self.factory.get('/')
+        response = api_root(request)
+        self.assertEquals(response.status_code, 200)
+        self.assertTrue('/programming-languages' in response.rendered_content)
+        self.assertTrue('/tutorials' in response.rendered_content)
 
 
 class ProgrammingLanguagesTest(APITestCase):
@@ -34,4 +47,5 @@ class ProgrammingLanguagesTest(APITestCase):
         response_lang = LanguageDetail.as_view()(get_lang, slug='emerald')
         # not approved, so should not be found, API returns 404
         self.assertEquals(response_lang.status_code, 404)
+
 
