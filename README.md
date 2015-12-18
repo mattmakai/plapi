@@ -1,28 +1,29 @@
 # Programming Languages API (PLAPI)
-Plapi is a web API for programming languages. There are endpoints for
-common paradigms, programming languages, libraries and tutorials.
+Plapi is a web API for programming languages, code libraries and tutorials. 
 
 This repository contains the source code for the web API. You don't
-need anything from here to get started with the API, just check out
-the next section.
+need any code from here to get started using the API, but this README does
+provide a reference for getting started.
 
+There are currently three endpoints:
+
+    1. [/programming-languages/](http://api.plapi.io/programming-languages/)
+    1. [/tutorials/](http://api.plapi.io/tutorials/)
+    1. /libraries/
+
+You can 
 
 ## Examples
-### Languages, Ecosystems, Concepts and Implementation
+### Programming Languages
+TBD
+
+
+### Potential Future Improvements 
 Return a list of all imperative paradigm programming languages that are 
 dynamically-typed.
 
     https://api.plapi.io/paradigms/imperative/?typing=dynamic
-
-
-What concepts should I know about in Ada?
-
-
-    https://api.plapi.io/concepts/ada
-
-
 Show me all the task queue implementations written in Go, Python or Java.
-
     
     https://api.plapi.io/implementations/task-queues/?language=go&language2=python&language3=java
 
@@ -34,20 +35,14 @@ List all the programming languages that first appeared starting in 2001.
 
 How many major and minor versions (x.x) of Go have been released?
 
-    TBD
-
-
 What languages were influenced by COBOL?
-
-    TBD
-
 
 What license is the Python programming language released under?
 
     https://api.plapi.io/programming-languages/python
 
 
-### Learning
+### Tutorials
 Give me a random Python with Django tutorial that shows how to implement 
 WebSockets.
 
@@ -72,27 +67,17 @@ List 50 language-agnostic relational database articles and tutorials.
 Give me 3 articles each on why I should use Java, Python and Go.
 
 
-### Services
-What companies are currently hiring for remote Ruby jobs?
-
-
-Are there any government agencies using Go?
-
-
-
-
-
 ### Meta
 Who created this API?
 [Matt Makai](http://www.mattmakai.com/)
 
 
 Is this API open source?
-[Yup](https://github.com/makaimc/plapi)
+[Yup](https://github.com/makaimc/plapi/LICENSE)
 
 
 If I use another API besides this one, which one should I use?
-[Twilio](https://twilio.com/docs) :)
+[Twilio](https://twilio.com/api) :)
 
 
 ## Quickstart
@@ -107,42 +92,6 @@ Try a GET request on the following URL:
 You'll receive back JSON corresponding to the Python programming language.
 
 
-## Endpoints
-There are several endpoints:
-
-Language ecosystems
-1. Concepts
-1. Code implementations
-1. Paradigms
-1. Programming languages
-
-Learning materials
-1. Tutorials
-1. Books
-1. Courses
-
-
-Services
-1. Helper libraries
-1. Consultants and contractors
-1. Gigs
-
-
-### Paradigms
-
-    /paradigms/
-
-
-### Programming Languages
-
-    /programming-languages/
-
-
-### Libraries
-
-    /programming-language/<language-slug>/libraries
-
-
 ## Adding new data
 Issue a POST request to an endpoint with the required data. There's a
 quick manual approval process, to make sure the data is correct and
@@ -151,6 +100,6 @@ for all Plapi requests.
 
 
 ## Editing existing data
-TBD.
+TBD
 
 
