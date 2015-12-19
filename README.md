@@ -6,9 +6,13 @@ need any code from here to get started using the API, but this README does
 provide a reference for getting started.
 
 There are currently three endpoints:
+
 1. [/programming-languages/](http://api.plapi.io/programming-languages/)
+
 1. [/tutorials/](http://api.plapi.io/tutorials/)
+
 1. /libraries/
+
 
 You can 
 
