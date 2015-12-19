@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block meta_header %}
+<meta name="description" content="The Programming Languages web API (PLAPI) provides a programmatic method for learning software development.">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        {% for page in pages %}
+          {% if page.slug == 'introduction' %}
+              {{ page.content }}
+          {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
