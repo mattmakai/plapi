@@ -1,7 +1,7 @@
 dj-database-url==0.3.0
 Django==1.9
 django-filter==0.11.0
-django-taggit==0.17.1
+django-taggit==0.17.6
 djangorestframework==3.3.2
 gunicorn==19.4.1
 Markdown==2.6.5
