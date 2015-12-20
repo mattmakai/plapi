@@ -5,16 +5,17 @@ This repository contains the source code for the web API. You don't
 need any code from here to get started using the API, but this README does
 provide a reference for getting started.
 
-There are currently three endpoints:
+There are currently two endpoints:
 
 1. [/programming-languages/](http://api.plapi.io/programming-languages/)
 
 1. [/tutorials/](http://api.plapi.io/tutorials/)
 
-1. /libraries/
 
+You can use these endpoints as an unauthenticated user at a rate of 5 
+requests per minute, or grab an API key to bump the limit up to 20 requests 
+per minute.
 
-You can 
 
 ## Examples
 ### Programming Languages
