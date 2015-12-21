@@ -39,7 +39,7 @@ class LanguageDetail(APIView):
             raise Http404
         if language is None:
             raise Http404
-        return lang
+        return language
 
     def get(self, request, slug, format=None):
         language = self.get_object(slug)
