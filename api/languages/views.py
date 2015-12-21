@@ -24,7 +24,7 @@ class LanguageList(APIView):
     queryset = Language.objects.filter(is_visible=True)
 
     def get(self, request, format=None):
-        languages = Language.objects.filter(is_visible=True)
+        languages = Language.objects.filter(is_visible=True).order_by('name')
         serializer = LanguageSerializer(languages, many=True,
                                         context={'request': request})
         return Response(serializer.data)
