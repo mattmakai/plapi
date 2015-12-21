@@ -15,8 +15,6 @@
 - include: dependencies.yml
 - include: wsgi.yml
 
-#- include: celery.yml
-
 - name: alert that deployment is complete
   twilio:
     msg: "Deployment complete!"

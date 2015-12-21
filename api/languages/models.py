@@ -29,7 +29,7 @@ class Language(models.Model):
     """
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=64, unique=True)
-    homepage_url = models.URLField(max_length=1024)
+    homepage_url = models.URLField(max_length=1024, blank=True)
     summary = models.TextField()
     year_appeared = models.IntegerField(null=True, blank=True)
     is_visible = models.BooleanField(default=False)

@@ -11,6 +11,7 @@ class LibraryAdmin(admin.ModelAdmin):
 @admin.register(Language)
 class LanguageAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_visible')
+    ordering = ('name',)
 
 
 @admin.register(Tutorial)
