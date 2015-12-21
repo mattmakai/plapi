@@ -1,2 +1,2 @@
-ansible==1.9.2
+git+https://github.com/ansible/ansible.git@stable-2.0
 Fabric==1.10.2
