@@ -21,6 +21,9 @@ class Library(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "libraries"
+
 
 class Language(models.Model):
     """
@@ -47,9 +50,10 @@ class Tutorial(models.Model):
     """
     name = models.CharField(max_length=1024)
     slug = models.SlugField(max_length=64, unique=True)
+    url = models.URLField(max_length=2048)
+    language = models.ForeignKey("Language", related_name="tutorials",
+                                 blank=True, null=True)
     summary = models.TextField()
-    homepage_url = models.URLField(max_length=2048)
-    language = models.ForeignKey("Language", related_name="tutorials")
     is_visible = models.BooleanField(default=False)
 
     tags = TaggableManager()
