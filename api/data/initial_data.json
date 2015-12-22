@@ -1,1 +1,1138 @@
-[{"model": "languages.language", "pk": 1, "fields": {"name": "Python", "slug": "python", "homepage_url": "https://www.python.org/", "summary": "Python is dynamically typed.", "year_appeared": 1991, "is_visible": true}}, {"model": "languages.language", "pk": 2, "fields": {"name": "Ada", "slug": "ada", "homepage_url": "http://www.adaic.org/", "summary": "Ada is an statically typed, imperative paradigm programming language.", "year_appeared": 1980, "is_visible": true}}, {"model": "languages.language", "pk": 3, "fields": {"name": "Swift", "slug": "swift", "homepage_url": "https://developer.apple.com/swift/", "summary": "Swift is a multi-paradigm open source programming language originally developed by Apple.", "year_appeared": 2014, "is_visible": true}}, {"model": "languages.language", "pk": 4, "fields": {"name": "Regent", "slug": "regent", "homepage_url": "http://regent-lang.org/", "summary": "Regent is a language for implicit dataflow parallelism.", "year_appeared": null, "is_visible": true}}, {"model": "languages.language", "pk": 5, "fields": {"name": "CoffeeScript", "slug": "coffeescript", "homepage_url": "http://coffeescript.org/", "summary": "CoffeeScript is a multi-paradigm language the transcompiles to JavaScript.", "year_appeared": 2009, "is_visible": true}}, {"model": "languages.language", "pk": 6, "fields": {"name": "Arc", "slug": "arc", "homepage_url": "http://arclanguage.org/", "summary": "Arc is a dialect of Lisp intended for exploratory programming.", "year_appeared": 2008, "is_visible": true}}, {"model": "languages.language", "pk": 7, "fields": {"name": "C", "slug": "c", "homepage_url": "", "summary": "C is a statically-typed, imperative paradigm programming language. The language was originally created for implementing the Unix operating system but then grew to be one of the most widely used and influential programming language in computer science.", "year_appeared": 1972, "is_visible": true}}, {"model": "languages.language", "pk": 8, "fields": {"name": "C#", "slug": "c-sharp", "homepage_url": "", "summary": "C# is a multi-paradigm programming language originally developed by Microsoft for its .NET platform.", "year_appeared": 2000, "is_visible": true}}, {"model": "languages.language", "pk": 9, "fields": {"name": "Ceylon", "slug": "ceylon", "homepage_url": "http://ceylon-lang.org/", "summary": "Ceylon is an open source, statically-typed object-oriented programming language that can create programs that run on the Java Virtual Machine or transcompiled to JavaScript.", "year_appeared": 2011, "is_visible": true}}, {"model": "languages.language", "pk": 10, "fields": {"name": "Clojure", "slug": "clojure", "homepage_url": "http://clojure.org/", "summary": "Clojure is functional paradigm programming language heavily influenced by Lisp.", "year_appeared": 2007, "is_visible": true}}, {"model": "languages.language", "pk": 11, "fields": {"name": "COBOL", "slug": "cobol", "homepage_url": "", "summary": "COBOL is a procedural and imperative paradigm programming language designed for business use. The language dates back to the 1950s and was standardized in 1968, being revised fouor times, most recently in 2014.", "year_appeared": 1959, "is_visible": true}}, {"model": "languages.language", "pk": 12, "fields": {"name": "C++", "slug": "c-plus-plus", "homepage_url": "https://isocpp.org/", "summary": "C++ is an imperative and object-oriented language that enhances the C programming language with classes and related features such as inheritance, templates and exceptions.", "year_appeared": 1983, "is_visible": true}}, {"model": "languages.language", "pk": 13, "fields": {"name": "Common Lisp", "slug": "common-lisp", "homepage_url": "https://common-lisp.net/", "summary": "Common Lisp is a standardized dialect specification of the Lisp Programming Language. Several implementations of the specification are available.", "year_appeared": 1984, "is_visible": true}}, {"model": "languages.language", "pk": 14, "fields": {"name": "Ruby", "slug": "ruby", "homepage_url": "http://www.ruby-lang.org/en/", "summary": "Ruby is a dynamically typed multi-paradigm language that blends object-oriented and functional programming.", "year_appeared": 1995, "is_visible": true}}, {"model": "languages.language", "pk": 15, "fields": {"name": "Rust", "slug": "rust", "homepage_url": "https://www.rust-lang.org/", "summary": "Rust is a statically-typed language intended for concurrent and highly safe software programs.", "year_appeared": 2010, "is_visible": true}}, {"model": "languages.language", "pk": 16, "fields": {"name": "Red", "slug": "red", "homepage_url": "http://www.red-lang.org/", "summary": "Red is a functional programming language inspired by REBOL.", "year_appeared": 2011, "is_visible": true}}, {"model": "languages.language", "pk": 17, "fields": {"name": "Bash", "slug": "bash", "homepage_url": "https://www.gnu.org/software/bash/", "summary": "Bash, the Bourne Again SHell is an open source Unix shell and command language.", "year_appeared": 1989, "is_visible": true}}, {"model": "languages.language", "pk": 18, "fields": {"name": "Haxe", "slug": "haxe", "homepage_url": "http://haxe.org/", "summary": "Haxe is an open source statically-typed multi-paradigm programming language.", "year_appeared": 2005, "is_visible": true}}, {"model": "languages.language", "pk": 19, "fields": {"name": "Haskell", "slug": "haskell", "homepage_url": "https://www.haskell.org/", "summary": "Haskell is a statically-typed functional paradigm language named after logician Haskell Curry.", "year_appeared": 1990, "is_visible": true}}, {"model": "languages.language", "pk": 20, "fields": {"name": "Go", "slug": "go-lang", "homepage_url": "https://golang.org/", "summary": "Go is a strongly statically-typed, BSD-licensed open source language originally built at Google.", "year_appeared": 2009, "is_visible": true}}, {"model": "languages.language", "pk": 21, "fields": {"name": "Scala", "slug": "scala", "homepage_url": "http://www.scala-lang.org/", "summary": "Scala is a strongly statically-typed multi-paradigm (object-oriented and functional) language that compiles to Java bytecode to run on the Java Virtual Machine.", "year_appeared": 2004, "is_visible": true}}, {"model": "languages.language", "pk": 22, "fields": {"name": "Elm", "slug": "elm", "homepage_url": "http://elm-lang.org/", "summary": "Elm is a functional paradigm language intended for declaratively building web applications.", "year_appeared": 2012, "is_visible": true}}, {"model": "languages.language", "pk": 23, "fields": {"name": "JavaScript", "slug": "javascript", "homepage_url": "", "summary": "JavaScript is a dynamically-typed interpreted language supported by all major web browsers and is increasingly used to write server-side web application code as well.", "year_appeared": 1995, "is_visible": true}}, {"model": "languages.language", "pk": 24, "fields": {"name": "Kotlin", "slug": "kotlin", "homepage_url": "http://kotlinlang.org/", "summary": "Kotlin is a statically-typed language for the Java Virtual Machine that is open source under the Apache 2 license.", "year_appeared": 2011, "is_visible": true}}, {"model": "languages.language", "pk": 25, "fields": {"name": "D", "slug": "d", "homepage_url": "http://dlang.org/", "summary": "D is a multi-paradigm (object-oriented, functional and generic) statically-typed language originally intended as a C++ replacement but has now developed beyond that original goal.", "year_appeared": 2001, "is_visible": true}}, {"model": "languages.language", "pk": 26, "fields": {"name": "Elixir", "slug": "elixir", "homepage_url": "http://elixir-lang.org/", "summary": "Elixir is a multi-paradigm (functional, distributed and process-oriented) dynamically-typed language that runs on the Erlang virtual machine. Elixir is open sourced under the Apache 2 license.", "year_appeared": 2012, "is_visible": true}}, {"model": "languages.language", "pk": 27, "fields": {"name": "Java", "slug": "java", "homepage_url": "https://www.java.com/", "summary": "Java is an object-oriented paradigm, statically-typed language originally created with the goal for developers to write code once and run it on any platform the Java Virtual Machine (JVM) is available.", "year_appeared": 1995, "is_visible": true}}, {"model": "languages.language", "pk": 28, "fields": {"name": "Julia", "slug": "julia", "homepage_url": "http://julialang.org/", "summary": "Julia is a multi-paradigm (procedural, object-oriented and functional), dynamically-typed general purpose language often used for scientific computing.", "year_appeared": 2012, "is_visible": true}}, {"model": "languages.language", "pk": 29, "fields": {"name": "Logo", "slug": "logo", "homepage_url": "", "summary": "Logo is a dynamically-typed, functional and procedural paradigm educational language which is commonly known by the small robot on the screen called a \"turtle\" that is used for drawing.", "year_appeared": 1967, "is_visible": true}}, {"model": "languages.language", "pk": 30, "fields": {"name": "Lua", "slug": "lua", "homepage_url": "http://www.lua.org/", "summary": "Lua is a dynamically-typed scripting language open sourced under the MIT license.", "year_appeared": 1993, "is_visible": true}}, {"model": "languages.language", "pk": 31, "fields": {"name": "Perl", "slug": "perl", "homepage_url": "https://www.perl.org/", "summary": "Perl is a functional paradigm, dynamically-typed language open sourced under the GNU license. Perl 5 and Perl 6 are separate languages therefore Perl is sometimes referred to as \"a family of programming languages\" rather than a single entity.", "year_appeared": 1987, "is_visible": true}}, {"model": "languages.language", "pk": 32, "fields": {"name": "PHP", "slug": "php", "homepage_url": "https://www.php.net/", "summary": "PHP, which currently stands for PHP: Hypertext Preprocessor, is a dynamically-typed scripting language typically used for server-side web development.", "year_appeared": 1995, "is_visible": true}}, {"model": "languages.tutorial", "pk": 1, "fields": {"name": "Full Stack Python", "slug": "full-stack-python", "summary": "Full Stack Python is an open book that explains concepts in plain language and provides the most helpful resources on those topics.", "homepage_url": "https://www.fullstackpython.com/", "language": 1, "is_visible": true}}, {"model": "languages.tutorial", "pk": 2, "fields": {"name": "Real Python", "slug": "real-python", "summary": "Real Python teaches programming and web development through hands-on, interesting examples that are useful and fun! Join the thousands who have already benefited from these unique Python courses and download your copy today.", "homepage_url": "https://realpython.com/", "language": 1, "is_visible": true}}, {"model": "taggit.tag", "pk": 1, "fields": {"name": "multiparadigm", "slug": "multiparadigm"}}, {"model": "taggit.tag", "pk": 2, "fields": {"name": "flask", "slug": "flask"}}, {"model": "taggit.tag", "pk": 3, "fields": {"name": "web development", "slug": "web-development"}}, {"model": "taggit.tag", "pk": 4, "fields": {"name": "django", "slug": "django"}}, {"model": "taggit.tag", "pk": 7, "fields": {"name": "open source", "slug": "open-source"}}, {"model": "taggit.tag", "pk": 10, "fields": {"name": "functional", "slug": "functional"}}, {"model": "taggit.tag", "pk": 11, "fields": {"name": "imperative", "slug": "imperative"}}, {"model": "taggit.tag", "pk": 12, "fields": {"name": "object-oriented", "slug": "object-oriented"}}, {"model": "taggit.tag", "pk": 13, "fields": {"name": "procedural", "slug": "procedural"}}, {"model": "taggit.tag", "pk": 14, "fields": {"name": "lisp", "slug": "lisp"}}, {"model": "taggit.tag", "pk": 15, "fields": {"name": "statically-typed", "slug": "statically-typed"}}, {"model": "taggit.tag", "pk": 17, "fields": {"name": "dynamically-typed", "slug": "dynamically-typed"}}, {"model": "taggit.taggeditem", "pk": 2, "fields": {"tag": 2, "content_type": ["languages", "tutorial"], "object_id": 1}}, {"model": "taggit.taggeditem", "pk": 3, "fields": {"tag": 3, "content_type": ["languages", "tutorial"], "object_id": 1}}, {"model": "taggit.taggeditem", "pk": 4, "fields": {"tag": 4, "content_type": ["languages", "tutorial"], "object_id": 1}}, {"model": "taggit.taggeditem", "pk": 5, "fields": {"tag": 2, "content_type": ["languages", "tutorial"], "object_id": 2}}, {"model": "taggit.taggeditem", "pk": 6, "fields": {"tag": 4, "content_type": ["languages", "tutorial"], "object_id": 2}}, {"model": "taggit.taggeditem", "pk": 14, "fields": {"tag": 1, "content_type": ["languages", "language"], "object_id": 5}}, {"model": "taggit.taggeditem", "pk": 15, "fields": {"tag": 1, "content_type": ["languages", "language"], "object_id": 1}}, {"model": "taggit.taggeditem", "pk": 18, "fields": {"tag": 1, "content_type": ["languages", "language"], "object_id": 3}}, {"model": "taggit.taggeditem", "pk": 19, "fields": {"tag": 7, "content_type": ["languages", "language"], "object_id": 3}}, {"model": "taggit.taggeditem", "pk": 20, "fields": {"tag": 10, "content_type": ["languages", "language"], "object_id": 6}}, {"model": "taggit.taggeditem", "pk": 21, "fields": {"tag": 11, "content_type": ["languages", "language"], "object_id": 7}}, {"model": "taggit.taggeditem", "pk": 22, "fields": {"tag": 1, "content_type": ["languages", "language"], "object_id": 8}}, {"model": "taggit.taggeditem", "pk": 23, "fields": {"tag": 12, "content_type": ["languages", "language"], "object_id": 9}}, {"model": "taggit.taggeditem", "pk": 24, "fields": {"tag": 10, "content_type": ["languages", "language"], "object_id": 10}}, {"model": "taggit.taggeditem", "pk": 25, "fields": {"tag": 11, "content_type": ["languages", "language"], "object_id": 11}}, {"model": "taggit.taggeditem", "pk": 26, "fields": {"tag": 13, "content_type": ["languages", "language"], "object_id": 11}}, {"model": "taggit.taggeditem", "pk": 27, "fields": {"tag": 11, "content_type": ["languages", "language"], "object_id": 12}}, {"model": "taggit.taggeditem", "pk": 28, "fields": {"tag": 12, "content_type": ["languages", "language"], "object_id": 12}}, {"model": "taggit.taggeditem", "pk": 29, "fields": {"tag": 10, "content_type": ["languages", "language"], "object_id": 13}}, {"model": "taggit.taggeditem", "pk": 30, "fields": {"tag": 14, "content_type": ["languages", "language"], "object_id": 13}}, {"model": "taggit.taggeditem", "pk": 31, "fields": {"tag": 1, "content_type": ["languages", "language"], "object_id": 14}}, {"model": "taggit.taggeditem", "pk": 32, "fields": {"tag": 15, "content_type": ["languages", "language"], "object_id": 15}}, {"model": "taggit.taggeditem", "pk": 33, "fields": {"tag": 15, "content_type": ["languages", "language"], "object_id": 2}}, {"model": "taggit.taggeditem", "pk": 34, "fields": {"tag": 7, "content_type": ["languages", "language"], "object_id": 4}}, {"model": "taggit.taggeditem", "pk": 35, "fields": {"tag": 10, "content_type": ["languages", "language"], "object_id": 16}}, {"model": "taggit.taggeditem", "pk": 36, "fields": {"tag": 7, "content_type": ["languages", "language"], "object_id": 17}}, {"model": "taggit.taggeditem", "pk": 39, "fields": {"tag": 10, "content_type": ["languages", "language"], "object_id": 19}}, {"model": "taggit.taggeditem", "pk": 40, "fields": {"tag": 15, "content_type": ["languages", "language"], "object_id": 20}}, {"model": "taggit.taggeditem", "pk": 41, "fields": {"tag": 1, "content_type": ["languages", "language"], "object_id": 18}}, {"model": "taggit.taggeditem", "pk": 42, "fields": {"tag": 7, "content_type": ["languages", "language"], "object_id": 18}}, {"model": "taggit.taggeditem", "pk": 43, "fields": {"tag": 1, "content_type": ["languages", "language"], "object_id": 21}}, {"model": "taggit.taggeditem", "pk": 44, "fields": {"tag": 10, "content_type": ["languages", "language"], "object_id": 22}}, {"model": "taggit.taggeditem", "pk": 45, "fields": {"tag": 17, "content_type": ["languages", "language"], "object_id": 23}}, {"model": "taggit.taggeditem", "pk": 46, "fields": {"tag": 15, "content_type": ["languages", "language"], "object_id": 24}}, {"model": "taggit.taggeditem", "pk": 47, "fields": {"tag": 15, "content_type": ["languages", "language"], "object_id": 25}}, {"model": "taggit.taggeditem", "pk": 48, "fields": {"tag": 17, "content_type": ["languages", "language"], "object_id": 26}}, {"model": "taggit.taggeditem", "pk": 49, "fields": {"tag": 7, "content_type": ["languages", "language"], "object_id": 26}}, {"model": "taggit.taggeditem", "pk": 50, "fields": {"tag": 12, "content_type": ["languages", "language"], "object_id": 27}}, {"model": "taggit.taggeditem", "pk": 51, "fields": {"tag": 15, "content_type": ["languages", "language"], "object_id": 27}}, {"model": "taggit.taggeditem", "pk": 52, "fields": {"tag": 17, "content_type": ["languages", "language"], "object_id": 28}}, {"model": "taggit.taggeditem", "pk": 53, "fields": {"tag": 17, "content_type": ["languages", "language"], "object_id": 29}}, {"model": "taggit.taggeditem", "pk": 54, "fields": {"tag": 10, "content_type": ["languages", "language"], "object_id": 29}}, {"model": "taggit.taggeditem", "pk": 55, "fields": {"tag": 17, "content_type": ["languages", "language"], "object_id": 30}}, {"model": "taggit.taggeditem", "pk": 56, "fields": {"tag": 17, "content_type": ["languages", "language"], "object_id": 31}}, {"model": "taggit.taggeditem", "pk": 57, "fields": {"tag": 17, "content_type": ["languages", "language"], "object_id": 32}}]
+[
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "multiparadigm",
+    "slug": "multiparadigm"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "flask",
+    "slug": "flask"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "web development",
+    "slug": "web-development"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "open source",
+    "slug": "open-source"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 10,
+  "fields": {
+    "name": "functional",
+    "slug": "functional"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 11,
+  "fields": {
+    "name": "imperative",
+    "slug": "imperative"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 12,
+  "fields": {
+    "name": "object-oriented",
+    "slug": "object-oriented"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 13,
+  "fields": {
+    "name": "procedural",
+    "slug": "procedural"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 14,
+  "fields": {
+    "name": "lisp",
+    "slug": "lisp"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 15,
+  "fields": {
+    "name": "statically-typed",
+    "slug": "statically-typed"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 17,
+  "fields": {
+    "name": "dynamically-typed",
+    "slug": "dynamically-typed"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 18,
+  "fields": {
+    "name": "proprietary license",
+    "slug": "proprietary-license"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": [
+      "languages",
+      "tutorial"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 3,
+    "content_type": [
+      "languages",
+      "tutorial"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 4,
+    "content_type": [
+      "languages",
+      "tutorial"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 2,
+    "content_type": [
+      "languages",
+      "tutorial"
+    ],
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 4,
+    "content_type": [
+      "languages",
+      "tutorial"
+    ],
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 18,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 19,
+  "fields": {
+    "tag": 7,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 20,
+  "fields": {
+    "tag": 10,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 21,
+  "fields": {
+    "tag": 11,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 22,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 23,
+  "fields": {
+    "tag": 12,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 24,
+  "fields": {
+    "tag": 10,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 25,
+  "fields": {
+    "tag": 11,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 26,
+  "fields": {
+    "tag": 13,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 27,
+  "fields": {
+    "tag": 11,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 28,
+  "fields": {
+    "tag": 12,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 12
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 29,
+  "fields": {
+    "tag": 10,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 30,
+  "fields": {
+    "tag": 14,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 31,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 14
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 32,
+  "fields": {
+    "tag": 15,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 15
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 33,
+  "fields": {
+    "tag": 15,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 34,
+  "fields": {
+    "tag": 7,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 35,
+  "fields": {
+    "tag": 10,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 36,
+  "fields": {
+    "tag": 7,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 39,
+  "fields": {
+    "tag": 10,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 40,
+  "fields": {
+    "tag": 15,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 41,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 42,
+  "fields": {
+    "tag": 7,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 43,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 44,
+  "fields": {
+    "tag": 10,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 45,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 46,
+  "fields": {
+    "tag": 15,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 47,
+  "fields": {
+    "tag": 15,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 48,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 49,
+  "fields": {
+    "tag": 7,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 50,
+  "fields": {
+    "tag": 12,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 27
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 51,
+  "fields": {
+    "tag": 15,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 27
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 52,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 28
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 53,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 29
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 54,
+  "fields": {
+    "tag": 10,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 29
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 55,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 30
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 56,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 31
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 57,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 32
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 58,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 33
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 59,
+  "fields": {
+    "tag": 18,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 33
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 60,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 34
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 61,
+  "fields": {
+    "tag": 17,
+    "content_type": [
+      "languages",
+      "language"
+    ],
+    "object_id": 35
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 1,
+  "fields": {
+    "name": "Python",
+    "slug": "python",
+    "homepage_url": "https://www.python.org/",
+    "summary": "Python is dynamically typed.",
+    "year_appeared": 1991,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 2,
+  "fields": {
+    "name": "Ada",
+    "slug": "ada",
+    "homepage_url": "http://www.adaic.org/",
+    "summary": "Ada is an statically typed, imperative paradigm programming language.",
+    "year_appeared": 1980,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 3,
+  "fields": {
+    "name": "Swift",
+    "slug": "swift",
+    "homepage_url": "https://developer.apple.com/swift/",
+    "summary": "Swift is a multi-paradigm open source programming language originally developed by Apple.",
+    "year_appeared": 2014,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 4,
+  "fields": {
+    "name": "Regent",
+    "slug": "regent",
+    "homepage_url": "http://regent-lang.org/",
+    "summary": "Regent is a language for implicit dataflow parallelism.",
+    "year_appeared": null,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 5,
+  "fields": {
+    "name": "CoffeeScript",
+    "slug": "coffeescript",
+    "homepage_url": "http://coffeescript.org/",
+    "summary": "CoffeeScript is a multi-paradigm language the transcompiles to JavaScript.",
+    "year_appeared": 2009,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 6,
+  "fields": {
+    "name": "Arc",
+    "slug": "arc",
+    "homepage_url": "http://arclanguage.org/",
+    "summary": "Arc is a dialect of Lisp intended for exploratory programming.",
+    "year_appeared": 2008,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 7,
+  "fields": {
+    "name": "C",
+    "slug": "c",
+    "homepage_url": "",
+    "summary": "C is a statically-typed, imperative paradigm programming language. The language was originally created for implementing the Unix operating system but then grew to be one of the most widely used and influential programming language in computer science.",
+    "year_appeared": 1972,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 8,
+  "fields": {
+    "name": "C#",
+    "slug": "c-sharp",
+    "homepage_url": "",
+    "summary": "C# is a multi-paradigm programming language originally developed by Microsoft for its .NET platform.",
+    "year_appeared": 2000,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 9,
+  "fields": {
+    "name": "Ceylon",
+    "slug": "ceylon",
+    "homepage_url": "http://ceylon-lang.org/",
+    "summary": "Ceylon is an open source, statically-typed object-oriented programming language that can create programs that run on the Java Virtual Machine or transcompiled to JavaScript.",
+    "year_appeared": 2011,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 10,
+  "fields": {
+    "name": "Clojure",
+    "slug": "clojure",
+    "homepage_url": "http://clojure.org/",
+    "summary": "Clojure is functional paradigm programming language heavily influenced by Lisp.",
+    "year_appeared": 2007,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 11,
+  "fields": {
+    "name": "COBOL",
+    "slug": "cobol",
+    "homepage_url": "",
+    "summary": "COBOL is a procedural and imperative paradigm programming language designed for business use. The language dates back to the 1950s and was standardized in 1968, being revised fouor times, most recently in 2014.",
+    "year_appeared": 1959,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 12,
+  "fields": {
+    "name": "C++",
+    "slug": "c-plus-plus",
+    "homepage_url": "https://isocpp.org/",
+    "summary": "C++ is an imperative and object-oriented language that enhances the C programming language with classes and related features such as inheritance, templates and exceptions.",
+    "year_appeared": 1983,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 13,
+  "fields": {
+    "name": "Common Lisp",
+    "slug": "common-lisp",
+    "homepage_url": "https://common-lisp.net/",
+    "summary": "Common Lisp is a standardized dialect specification of the Lisp Programming Language. Several implementations of the specification are available.",
+    "year_appeared": 1984,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 14,
+  "fields": {
+    "name": "Ruby",
+    "slug": "ruby",
+    "homepage_url": "http://www.ruby-lang.org/en/",
+    "summary": "Ruby is a dynamically typed multi-paradigm language that blends object-oriented and functional programming.",
+    "year_appeared": 1995,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 15,
+  "fields": {
+    "name": "Rust",
+    "slug": "rust",
+    "homepage_url": "https://www.rust-lang.org/",
+    "summary": "Rust is a statically-typed language intended for concurrent and highly safe software programs.",
+    "year_appeared": 2010,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 16,
+  "fields": {
+    "name": "Red",
+    "slug": "red",
+    "homepage_url": "http://www.red-lang.org/",
+    "summary": "Red is a functional programming language inspired by REBOL.",
+    "year_appeared": 2011,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 17,
+  "fields": {
+    "name": "Bash",
+    "slug": "bash",
+    "homepage_url": "https://www.gnu.org/software/bash/",
+    "summary": "Bash, the Bourne Again SHell is an open source Unix shell and command language.",
+    "year_appeared": 1989,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 18,
+  "fields": {
+    "name": "Haxe",
+    "slug": "haxe",
+    "homepage_url": "http://haxe.org/",
+    "summary": "Haxe is an open source statically-typed multi-paradigm programming language.",
+    "year_appeared": 2005,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 19,
+  "fields": {
+    "name": "Haskell",
+    "slug": "haskell",
+    "homepage_url": "https://www.haskell.org/",
+    "summary": "Haskell is a statically-typed functional paradigm language named after logician Haskell Curry.",
+    "year_appeared": 1990,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 20,
+  "fields": {
+    "name": "Go",
+    "slug": "go-lang",
+    "homepage_url": "https://golang.org/",
+    "summary": "Go is a strongly statically-typed, BSD-licensed open source language originally built at Google.",
+    "year_appeared": 2009,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 21,
+  "fields": {
+    "name": "Scala",
+    "slug": "scala",
+    "homepage_url": "http://www.scala-lang.org/",
+    "summary": "Scala is a strongly statically-typed multi-paradigm (object-oriented and functional) language that compiles to Java bytecode to run on the Java Virtual Machine.",
+    "year_appeared": 2004,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 22,
+  "fields": {
+    "name": "Elm",
+    "slug": "elm",
+    "homepage_url": "http://elm-lang.org/",
+    "summary": "Elm is a functional paradigm language intended for declaratively building web applications.",
+    "year_appeared": 2012,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 23,
+  "fields": {
+    "name": "JavaScript",
+    "slug": "javascript",
+    "homepage_url": "",
+    "summary": "JavaScript is a dynamically-typed interpreted language supported by all major web browsers and is increasingly used to write server-side web application code as well.",
+    "year_appeared": 1995,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 24,
+  "fields": {
+    "name": "Kotlin",
+    "slug": "kotlin",
+    "homepage_url": "http://kotlinlang.org/",
+    "summary": "Kotlin is a statically-typed language for the Java Virtual Machine that is open source under the Apache 2 license.",
+    "year_appeared": 2011,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 25,
+  "fields": {
+    "name": "D",
+    "slug": "d",
+    "homepage_url": "http://dlang.org/",
+    "summary": "D is a multi-paradigm (object-oriented, functional and generic) statically-typed language originally intended as a C++ replacement but has now developed beyond that original goal.",
+    "year_appeared": 2001,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 26,
+  "fields": {
+    "name": "Elixir",
+    "slug": "elixir",
+    "homepage_url": "http://elixir-lang.org/",
+    "summary": "Elixir is a multi-paradigm (functional, distributed and process-oriented) dynamically-typed language that runs on the Erlang virtual machine. Elixir is open sourced under the Apache 2 license.",
+    "year_appeared": 2012,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 27,
+  "fields": {
+    "name": "Java",
+    "slug": "java",
+    "homepage_url": "https://www.java.com/",
+    "summary": "Java is an object-oriented paradigm, statically-typed language originally created with the goal for developers to write code once and run it on any platform the Java Virtual Machine (JVM) is available.",
+    "year_appeared": 1995,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 28,
+  "fields": {
+    "name": "Julia",
+    "slug": "julia",
+    "homepage_url": "http://julialang.org/",
+    "summary": "Julia is a multi-paradigm (procedural, object-oriented and functional), dynamically-typed general purpose language often used for scientific computing.",
+    "year_appeared": 2012,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 29,
+  "fields": {
+    "name": "Logo",
+    "slug": "logo",
+    "homepage_url": "",
+    "summary": "Logo is a dynamically-typed, functional and procedural paradigm educational language which is commonly known by the small robot on the screen called a \"turtle\" that is used for drawing.",
+    "year_appeared": 1967,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 30,
+  "fields": {
+    "name": "Lua",
+    "slug": "lua",
+    "homepage_url": "http://www.lua.org/",
+    "summary": "Lua is a dynamically-typed scripting language open sourced under the MIT license.",
+    "year_appeared": 1993,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 31,
+  "fields": {
+    "name": "Perl",
+    "slug": "perl",
+    "homepage_url": "https://www.perl.org/",
+    "summary": "Perl is a functional paradigm, dynamically-typed language open sourced under the GNU license. Perl 5 and Perl 6 are separate languages therefore Perl is sometimes referred to as \"a family of programming languages\" rather than a single entity.",
+    "year_appeared": 1987,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 32,
+  "fields": {
+    "name": "PHP",
+    "slug": "php",
+    "homepage_url": "https://www.php.net/",
+    "summary": "PHP, which currently stands for PHP: Hypertext Preprocessor, is a dynamically-typed scripting language typically used for server-side web development.",
+    "year_appeared": 1995,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 33,
+  "fields": {
+    "name": "Wolfram Language",
+    "slug": "wolfram-language",
+    "homepage_url": "http://www.wolfram.com/language/",
+    "summary": "The Wolfram Language is a dynamically-typed proprietary licensed language for mathematical computation. The language existed in some form for over 25 years before its official introduction in 2013.",
+    "year_appeared": 2013,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 34,
+  "fields": {
+    "name": "Groovy",
+    "slug": "groovy",
+    "homepage_url": "http://www.groovy-lang.org/",
+    "summary": "Groovy is a dynamically-typed, object-oriented paradigm language that runs on the Java Virtual Machine and is open sourced under the Apache 2 license.",
+    "year_appeared": 2003,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.language",
+  "pk": 35,
+  "fields": {
+    "name": "Erlang",
+    "slug": "erlang",
+    "homepage_url": "http://www.erlang.org/",
+    "summary": "Erlang is a dynamically-typed, functional and concurrent paradigm often used for highly available and fault tolerant systems. Erlang is open sourced under the Apache 2 license.",
+    "year_appeared": 1986,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.tutorial",
+  "pk": 1,
+  "fields": {
+    "name": "Full Stack Python",
+    "slug": "full-stack-python",
+    "summary": "Full Stack Python is an open book that explains concepts in plain language and provides the most helpful resources on those topics.",
+    "homepage_url": "https://www.fullstackpython.com/",
+    "language": 1,
+    "is_visible": true
+  }
+},
+{
+  "model": "languages.tutorial",
+  "pk": 2,
+  "fields": {
+    "name": "Real Python",
+    "slug": "real-python",
+    "summary": "Real Python teaches programming and web development through hands-on, interesting examples that are useful and fun! Join the thousands who have already benefited from these unique Python courses and download your copy today.",
+    "homepage_url": "https://realpython.com/",
+    "language": 1,
+    "is_visible": true
+  }
+}
+]
