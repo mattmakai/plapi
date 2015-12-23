@@ -7,8 +7,9 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.views import APIView
 
-from .models import Language, Tutorial
-from .serializers import LanguageSerializer, TutorialSerializer
+from .models import Language, Library, Tutorial
+from .serializers import (LanguageSerializer, LibrarySerializer,
+                         TutorialSerializer, )
 
 
 @api_view(('GET',))
@@ -16,6 +17,7 @@ def api_root(request, format=None):
     return Response({
         'programming-languages': reverse('programming-languages',
                                          request=request, format=format),
+        'libraries': reverse('libraries', request=request, format=format),
         'tutorials': reverse('tutorials', request=request, format=format),
     })
 
@@ -61,6 +63,34 @@ class LanguageDetail(APIView):
                         status=status.HTTP_400_BAD_REQUEST)
 
 
+class LibraryList(APIView):
+    queryset = Library.objects.filter(is_visible=True)
+
+    def get(self, request, format=None):
+        libraries = Library.objects.filter(is_visible=True).order_by('name')
+        serializer = LibrarySerializer(libraries, many=True,
+                                       context={'request': request})
+        return Response(serializer.data)
+
+
+class LibraryDetail(APIView):
+    def get_object(self, slug):
+        try:
+            library = Library.objects.filter(slug=slug,
+                                             is_visible=True).first()
+        except Library.DoesNotExist:
+            raise Http404
+        if library is None:
+            raise Http404
+        return library
+
+    def get(self, request, slug, format=None):
+        library = self.get_object(slug)
+        serializer = LibrarySerializer(tutorial,
+                                        context={'request': request})
+        return Response(serializer.data)
+
+
 class TutorialList(APIView):
     queryset = Tutorial.objects.filter(is_visible=True)
 
@@ -74,9 +104,13 @@ class TutorialList(APIView):
 class TutorialDetail(APIView):
     def get_object(self, slug):
         try:
-            return Tutorial.objects.filter(slug=slug).first()
+            tutorial = Tutorial.objects.filter(slug=slug,
+                                               is_visible=True).first()
         except Tutorial.DoesNotExist:
             raise Http404
+        if tutorial is None:
+            raise Http404
+        return tutorial
 
     def get(self, request, slug, format=None):
         tutorial = self.get_object(slug)

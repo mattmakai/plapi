@@ -17,7 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from languages.views import (api_root, LanguageList, LanguageDetail,
-                             TutorialDetail, TutorialList)
+                             LibraryList, LibraryDetail, TutorialDetail,
+                             TutorialList)
 
 
 urlpatterns = [
@@ -27,6 +28,10 @@ urlpatterns = [
         LanguageDetail.as_view(), name='language-detail'),
     url(r'^programming-languages/$', LanguageList.as_view(),
         name="programming-languages"),
+    url(r'^libraries/(?P<slug>[a-z0-9\-]+)/$',
+        LibraryDetail.as_view(), name='library-detail'),
+    url(r'^libraries/$', LibraryList.as_view(),
+        name="libraries"),
     url(r'^tutorials/(?P<slug>[a-z0-9\-]+)/$',
         TutorialDetail.as_view(), name='tutorial-detail'),
     url(r'^tutorials/$', TutorialList.as_view(),

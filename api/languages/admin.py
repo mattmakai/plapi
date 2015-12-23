@@ -5,7 +5,7 @@ from .models import Library, Language, Tutorial
 
 @admin.register(Library)
 class LibraryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'is_visible')
+    list_display = ('name', 'language', 'is_visible')
     ordering = ('name',)
 
 
@@ -17,5 +17,5 @@ class LanguageAdmin(admin.ModelAdmin):
 
 @admin.register(Tutorial)
 class TutorialAdmin(admin.ModelAdmin):
-    list_display = ('name', 'is_visible')
+    list_display = ('name', 'language', 'is_visible')
     ordering = ('name',)

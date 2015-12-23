@@ -4,14 +4,6 @@ from rest_framework.serializers import HyperlinkedRelatedField
 from .models import Library, Language, Tutorial
 
 
-"""
-class LibrarySerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Library
-        fields = ('name', 'slug', 'language', 'summary', 'url',)
-        lookup_field = 'slug'
-"""
-
 class LanguageSerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(
         view_name='language-detail', lookup_field='slug'
@@ -25,6 +17,20 @@ class LanguageSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('name', 'url', 'homepage_url', 'summary', 'tutorials')
 
 
+class LibrarySerializer(serializers.HyperlinkedModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name='library-detail', lookup_field='slug'
+    )
+    language = HyperlinkedRelatedField(many=False, read_only=True,
+                                        view_name='language-detail',
+                                        lookup_field='slug')
+    class Meta:
+        model = Library
+        fields = ('name', 'url', 'language', 'homepage_url', 'package_url',
+                  'summary',)
+        lookup_field = 'slug'
+
+
 class TutorialSerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(
         view_name='tutorial-detail', lookup_field='slug'
@@ -35,5 +41,6 @@ class TutorialSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Tutorial
-        fields = ('name', 'slug', 'url', 'summary', 'language')
+        fields = ('name', 'url', 'tutorial_url', 'summary', 'language')
         lookup_field = 'slug'
+

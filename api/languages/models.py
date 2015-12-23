@@ -11,8 +11,9 @@ class Library(models.Model):
     """
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=64, unique=True)
+    homepage_url = models.URLField(max_length=1024, blank=True, default="")
+    package_url = models.URLField(max_length=2048, blank=True, default="")
     summary = models.TextField()
-    homepage_url = models.URLField(max_length=1024)
     language = models.ForeignKey("Language")
     is_visible = models.BooleanField(default=False)
 
@@ -51,7 +52,7 @@ class Tutorial(models.Model):
     """
     name = models.CharField(max_length=1024)
     slug = models.SlugField(max_length=64, unique=True)
-    url = models.URLField(max_length=2048)
+    tutorial_url = models.URLField(max_length=2048)
     language = models.ForeignKey("Language", related_name="tutorials",
                                  blank=True, null=True)
     libraries = models.ManyToManyField("Library", related_name="tutorials",
