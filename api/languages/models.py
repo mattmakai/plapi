@@ -54,6 +54,8 @@ class Tutorial(models.Model):
     url = models.URLField(max_length=2048)
     language = models.ForeignKey("Language", related_name="tutorials",
                                  blank=True, null=True)
+    libraries = models.ManyToManyField("Library", related_name="tutorials",
+                                       blank=True)
     summary = models.TextField()
     is_visible = models.BooleanField(default=False)
 
