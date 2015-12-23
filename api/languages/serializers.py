@@ -29,9 +29,11 @@ class TutorialSerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(
         view_name='tutorial-detail', lookup_field='slug'
     )
+    language = HyperlinkedRelatedField(many=False, read_only=True,
+                                        view_name='language-detail',
+                                        lookup_field='slug')
 
     class Meta:
         model = Tutorial
-        fields = ('name', 'slug', 'homepage_url', 'summary',
-                  'url',)
+        fields = ('name', 'slug', 'url', 'summary', 'language')
         lookup_field = 'slug'
