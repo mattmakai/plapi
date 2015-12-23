@@ -13,9 +13,6 @@
   template: src=env.j2
             dest={{ app_dir }}/.env
 
-- name: create data migrations if necessary 
-  shell: ". {{ app_dir }}/.env; {{ venv_python }} {{ api_dir }}/manage.py makemigrations --noinput"
-
 - name: apply migrations on PostgreSQL via Django
   shell: ". {{ app_dir }}/.env; {{ venv_python }} {{ api_dir }}/manage.py migrate --noinput"
 
