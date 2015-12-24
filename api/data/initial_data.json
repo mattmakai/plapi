@@ -131,8 +131,8 @@
   "model": "taggit.tag",
   "pk": 22,
   "fields": {
-    "name": "package manager",
-    "slug": "package-manager"
+    "name": "package management",
+    "slug": "package-management"
   }
 },
 {
@@ -885,6 +885,30 @@
       "library"
     ],
     "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 75,
+  "fields": {
+    "tag": 21,
+    "content_type": [
+      "languages",
+      "library"
+    ],
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 76,
+  "fields": {
+    "tag": 22,
+    "content_type": [
+      "languages",
+      "tutorial"
+    ],
+    "object_id": 6
   }
 }
 ]
