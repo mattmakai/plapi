@@ -15,9 +15,9 @@ from .serializers import (LanguageSerializer, LibrarySerializer,
 @api_view(('GET',))
 def api_root(request, format=None):
     return Response({
+        'libraries': reverse('libraries', request=request, format=format),
         'programming-languages': reverse('programming-languages',
                                          request=request, format=format),
-        'libraries': reverse('libraries', request=request, format=format),
         'tutorials': reverse('tutorials', request=request, format=format),
     })
 

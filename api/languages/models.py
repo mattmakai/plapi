@@ -13,6 +13,8 @@ class Library(models.Model):
     slug = models.SlugField(max_length=64, unique=True)
     homepage_url = models.URLField(max_length=1024, blank=True, default="")
     package_url = models.URLField(max_length=2048, blank=True, default="")
+    source_code_url = models.URLField(max_length=2048, blank=True,
+                                      default="")
     summary = models.TextField()
     language = models.ForeignKey("Language")
     is_visible = models.BooleanField(default=False)

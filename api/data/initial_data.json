@@ -160,6 +160,14 @@
   }
 },
 {
+  "model": "taggit.tag",
+  "pk": 26,
+  "fields": {
+    "name": "build tool",
+    "slug": "build-tool"
+  }
+},
+{
   "model": "taggit.taggeditem",
   "pk": 2,
   "fields": {
@@ -865,6 +873,18 @@
       "library"
     ],
     "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 74,
+  "fields": {
+    "tag": 26,
+    "content_type": [
+      "languages",
+      "library"
+    ],
+    "object_id": 4
   }
 }
 ]
