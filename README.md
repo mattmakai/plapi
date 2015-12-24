@@ -1,15 +1,19 @@
-# Programming Languages API (PLAPI)
-Plapi is a web API for programming languages, code libraries and tutorials. 
+# Programming Languages Web API
+Plapi is a web application programming interface (API) for obtaining 
+curated data about programming languages, code libraries and tutorials. 
 
 This repository contains the source code for the web API. You don't
-need any code from here to get started using the API, but this README does
-provide a reference for getting started.
+need any code from here to use the API, but this README does provide a 
+reference for learning about what the API contains.
 
-There are currently two endpoints:
+There are currently three endpoints:
 
-1. [/programming-languages/](http://api.plapi.io/programming-languages/)
+1. [/libraries](http://api.plapi.io/libraries/) - 
 
-1. [/tutorials/](http://api.plapi.io/tutorials/)
+1. [/programming-languages](http://api.plapi.io/programming-languages/)
+
+1. [/tutorials](http://api.plapi.io/tutorials/)
+
 
 
 You can use these endpoints as an unauthenticated user at a rate of 5 

@@ -25,7 +25,7 @@ server {
   # nginx serve up static files and never send to the WSGI server
   location /static {
     autoindex on;
-    alias {{ app_dir }}/{{ app_name }}/static;
+    alias {{ api_dir }}/{{ app_name }}/static;
   }
 
   location / {
