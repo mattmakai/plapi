@@ -1,6 +1,7 @@
+from django.contrib.contenttypes.models import ContentType
+from django.http import Http404
 from django.shortcuts import render
 from django.template.defaultfilters import slugify
-from django.http import Http404
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -89,8 +90,13 @@ class LibraryList(APIView):
             tags = Tag.objects.filter(name__in=tags_list)
             if not tags:
                 return None
-            object_ids = TaggedItem.objects.filter(tag_id__in=tags).\
-              distinct('object_id').values_list('object_id', flat=True)
+            library_type = ContentType.objects.get(app_label="languages",
+                                                   model="library")
+            object_ids = TaggedItem.objects.filter(content_type=library_type,
+                                                   tag_id__in=tags).\
+                                                   distinct('object_id').\
+                                                   values_list('object_id',
+                                                               flat=True)
             queryset = queryset.filter(pk__in=object_ids)
         return queryset
 

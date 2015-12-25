@@ -10,11 +10,16 @@ reference for learning about what the API contains.
 ## Endpoints
 There are currently three endpoints:
 
-1. [/libraries](http://api.plapi.io/libraries/) - 
+1. [/libraries](http://api.plapi.io/libraries/) - a package of code,
+   such as a web framework or data analysis tool
 
-1. [/programming-languages](http://api.plapi.io/programming-languages/)
+1. [/programming-languages](http://api.plapi.io/programming-languages/) -
+   the anchor concept for the web API, a named programming language such
+   as Python or Elixir
 
-1. [/tutorials](http://api.plapi.io/tutorials/)
+1. [/tutorials](http://api.plapi.io/tutorials/) - an article or blog post
+   that helps the reader learn about a programming language and/or code
+   library
 
 
 You can use these endpoints as an unauthenticated user at a rate of 5 
@@ -28,12 +33,28 @@ following examples.
 
 List all the programming languages that first appeared starting in 2001.
 
-    https://api.plapi.io/programming-languages/?year-gte=2001
+    http://api.plapi.io/programming-languages/?year-gte=2001
+
+
+List all the programming languages that first appeared starting in 2001
+but no later than 2010.
+
+    http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010
 
 
 What languages are open sourced under the MIT license?
 
-    https://api.plapi.io/programming-languages/?license=MIT
+    http://api.plapi.io/programming-languages/?license=MIT
+
+
+What code libraries are useful for deploying code?
+
+    http://api.plapi.io/libraries/?tags=deployment
+
+
+List all the code libraries for either django OR flask.
+
+    http://api.plapi.io/libraries/?tags=django,flask
 
 
 ## Adding new data
@@ -42,20 +63,28 @@ quick manual approval process before the data is made visible. After the
 data is approved it'll be live for all Plapi requests.
 
 
-### Meta
+### FAQ / Meta
 Who created this API?
-[Matt Makai](http://www.mattmakai.com/)
+[Matt Makai](http://www.mattmakai.com/), currently a 
+[Developer Evangelist @ Twilio](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html).
 
 
 Is this API open source?
-[Yup](https://github.com/makaimc/plapi/LICENSE)
+[Yup, MIT license](https://github.com/makaimc/plapi/LICENSE). Fork and 
+hack away.
 
 
 If I use another API besides this one, which one should I use?
 [Twilio](https://twilio.com/api) :)
 
 
-### Future Ideas
+Where can I learn more about building web applications and APIs with
+Python?
+[Full Stack Python](https://www.fullstackpython.com)
+
+
+### Future Work & Ideas
 1. A /change-log/ endpoint whenever something new is added.
 1. Retrieve random tutorials on specific tags.
 1. Edit existing data through POST requests.
+
