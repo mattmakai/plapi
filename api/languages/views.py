@@ -6,6 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.views import APIView
+from taggit.models import Tag, TaggedItem
 
 from .models import Language, Library, Tutorial
 from .serializers import (LanguageSerializer, LibrarySerializer,
@@ -32,10 +33,8 @@ class LanguageList(APIView):
         year_gte = self.request.query_params.get('year-gte', None)
         if year_gte is not None:
             queryset = queryset.filter(year_appeared__gte=year_gte)
-
         year_lte = self.request.query_params.get('year-lte', None)
         if year_lte is not None:
-            print('year lte')
             queryset = queryset.filter(year_appeared__lte=year_lte)
         return queryset
 
@@ -78,13 +77,31 @@ class LanguageDetail(APIView):
 
 
 class LibraryList(APIView):
-    queryset = Library.objects.filter(is_visible=True)
+    def get_queryset(self):
+        """
+        Optionally restricts the returned purchases to a given user,
+        by filtering against a `username` query parameter in the URL.
+        """
+        queryset = Library.objects.filter(is_visible=True)
+        tags = self.request.query_params.get('tags', None)
+        if tags is not None:
+            tags_list = tags.strip().split(',')
+            tags = Tag.objects.filter(name__in=tags_list)
+            if not tags:
+                return None
+            object_ids = TaggedItem.objects.filter(tag_id__in=tags).\
+              distinct('object_id').values_list('object_id', flat=True)
+            queryset = queryset.filter(pk__in=object_ids)
+        return queryset
 
     def get(self, request, format=None):
-        libraries = Library.objects.filter(is_visible=True).order_by('name')
-        serializer = LibrarySerializer(libraries, many=True,
-                                       context={'request': request})
-        return Response(serializer.data)
+        libraries = self.get_queryset()
+        if libraries is not None:
+            libraries.order_by('name')
+            serializer = LibrarySerializer(libraries, many=True,
+                                           context={'request': request})
+            return Response(serializer.data)
+        return Response([])
 
 
 class LibraryDetail(APIView):
