@@ -32,6 +32,11 @@ class LanguageList(APIView):
         year_gte = self.request.query_params.get('year-gte', None)
         if year_gte is not None:
             queryset = queryset.filter(year_appeared__gte=year_gte)
+
+        year_lte = self.request.query_params.get('year-lte', None)
+        if year_lte is not None:
+            print('year lte')
+            queryset = queryset.filter(year_appeared__lte=year_lte)
         return queryset
 
     def get(self, request, format=None):
