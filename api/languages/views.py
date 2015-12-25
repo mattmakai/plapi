@@ -23,10 +23,19 @@ def api_root(request, format=None):
 
 
 class LanguageList(APIView):
-    queryset = Language.objects.filter(is_visible=True)
+    def get_queryset(self):
+        """
+        Optionally restricts the returned purchases to a given user,
+        by filtering against a `username` query parameter in the URL.
+        """
+        queryset = Language.objects.filter(is_visible=True)
+        year_gte = self.request.query_params.get('year-gte', None)
+        if year_gte is not None:
+            queryset = queryset.filter(year_appeared__gte=year_gte)
+        return queryset
 
     def get(self, request, format=None):
-        languages = Language.objects.filter(is_visible=True).order_by('name')
+        languages = self.get_queryset().order_by('name')
         serializer = LanguageSerializer(languages, many=True,
                                         context={'request': request})
         return Response(serializer.data)

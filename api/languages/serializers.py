@@ -14,7 +14,8 @@ class LanguageSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Language
-        fields = ('name', 'url', 'homepage_url', 'summary', 'tutorials')
+        fields = ('name', 'url', 'homepage_url', 'year_appeared', 'summary',
+                  'tutorials')
 
 
 class LibrarySerializer(serializers.HyperlinkedModelSerializer):
