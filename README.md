@@ -1,25 +1,26 @@
 # Programming Languages Web API
-Plapi is a web application programming interface (API) for obtaining 
-curated data about programming languages, code libraries and tutorials. 
+Plapi is a 
+[web application programming interface (API)](https://www.fullstackpython.com/application-programming-interface.html) 
+for curated data about programming languages, code libraries and tutorials. 
 
-This repository contains the source code for the web API. You don't
-need any code from here to use the API, but this README does provide a 
+This repository contains the source code for the web API. You do not
+need any code from here to access the API. This README provides a
 reference for learning about what the API contains.
 
 
 ## Endpoints
 There are currently three endpoints:
 
-1. [/libraries](http://api.plapi.io/libraries/) - a package of code,
+1. [/libraries](http://api.plapi.io/libraries/) - packages of reuseable code 
    such as a web framework or data analysis tool
 
 1. [/programming-languages](http://api.plapi.io/programming-languages/) -
-   the anchor concept for the web API, a named programming language such
-   as Python or Elixir
+   a named programming language such as 
+   [Python](http://api.plapi.io/programming-languages/python) or 
+   [Elixir](http://api.plapi.io/programming-languages/elixir)
 
-1. [/tutorials](http://api.plapi.io/tutorials/) - an article or blog post
-   that helps the reader learn about a programming language and/or code
-   library
+1. [/tutorials](http://api.plapi.io/tutorials/) - articles or blog posts
+   that help readers learn about a programming language and/or code library
 
 
 You can use these endpoints as an unauthenticated user at a rate of 5 
@@ -28,18 +29,18 @@ to 20 requests per minute.
 
 
 ## Searching
-The data will soon be searchable with querystring parameters such as the
-following examples.
+Give the following examples a try to get an initial taste of what the API
+can do for you.
 
-* List all the programming languages that first appeared starting in 2001.
+* **List all programming languages that first appeared starting in 2001.**
 
   GET [http://api.plapi.io/programming-languages/?year-gte=2001](http://api.plapi.io/programming-languages/?year-gte=2001)
 
 
-List all the programming languages that first appeared starting in 2001
-but no later than 2010.
+* **List all programming languages that first appeared starting in 2001,
+  but no later than 2010.**
 
-    http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010
+  GET [http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010]([http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010)
 
 
 What languages are open sourced under the MIT license?
