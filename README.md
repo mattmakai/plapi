@@ -31,9 +31,9 @@ to 20 requests per minute.
 The data will soon be searchable with querystring parameters such as the
 following examples.
 
-List all the programming languages that first appeared starting in 2001.
+* List all the programming languages that first appeared starting in 2001.
 
-    http://api.plapi.io/programming-languages/?year-gte=2001
+  GET [http://api.plapi.io/programming-languages/?year-gte=2001](http://api.plapi.io/programming-languages/?year-gte=2001)
 
 
 List all the programming languages that first appeared starting in 2001
@@ -71,6 +71,7 @@ data is approved it'll be live for all Plapi requests.
 
 
 1. **Is this API open source?**
+
     [Yup, MIT license](https://github.com/makaimc/plapi/LICENSE). Fork and 
     hack away. Submit a 
     [pull request](https://github.com/makaimc/plapi/pulls) when you improve
@@ -78,6 +79,7 @@ data is approved it'll be live for all Plapi requests.
 
 
 1. **I'm learning about web APIs. What's another one I should use?**
+
     [Twilio](https://twilio.com/api) :)
 
 
@@ -90,6 +92,6 @@ data is approved it'll be live for all Plapi requests.
 
 ### Future Work & Ideas
 1. A /change-log/ endpoint whenever something new is added.
-1. Retrieve random tutorials on specific tags.
+1. Retrieve random libraries and tutorials on specific tags.
 1. Edit existing data through POST requests.
 
