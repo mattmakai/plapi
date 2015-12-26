@@ -64,12 +64,13 @@ data is approved it'll be live for all Plapi requests.
 
 
 ### FAQ / Meta
-Who created this API?
-[Matt Makai](http://www.mattmakai.com/), currently a 
-[Developer Evangelist @ Twilio](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html).
+1. Who created this API?
+
+    [Matt Makai](http://www.mattmakai.com/), currently a 
+    [Developer Evangelist @ Twilio](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html).
 
 
-Is this API open source?
+1. Is this API open source?
 [Yup, MIT license](https://github.com/makaimc/plapi/LICENSE). Fork and 
 hack away.
 

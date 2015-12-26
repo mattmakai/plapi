@@ -8,10 +8,9 @@
 *.log
 assets
 tmp/
+site/
 api/deploy/ssh_keys/*
 api/deploy/ssl_cert/*
 api/deploy/deploy_key/*
 api/db.sqlite3
 .env
-
-
