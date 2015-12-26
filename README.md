@@ -64,24 +64,28 @@ data is approved it'll be live for all Plapi requests.
 
 
 ### FAQ / Meta
-1. Who created this API?
+1. **Who created this API?**
 
     [Matt Makai](http://www.mattmakai.com/), currently a 
     [Developer Evangelist @ Twilio](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html).
 
 
-1. Is this API open source?
-[Yup, MIT license](https://github.com/makaimc/plapi/LICENSE). Fork and 
-hack away.
+1. **Is this API open source?**
+    [Yup, MIT license](https://github.com/makaimc/plapi/LICENSE). Fork and 
+    hack away. Submit a 
+    [pull request](https://github.com/makaimc/plapi/pulls) when you improve
+    the code.
 
 
-If I use another API besides this one, which one should I use?
-[Twilio](https://twilio.com/api) :)
+1. **I'm learning about web APIs. What's another one I should use?**
+    [Twilio](https://twilio.com/api) :)
 
 
-Where can I learn more about building web applications and APIs with
-Python?
-[Full Stack Python](https://www.fullstackpython.com)
+1. **Where can I learn more about building web apps and APIs with Python?**
+
+    [Full Stack Python](https://www.fullstackpython.com), especially the
+    [Best Python Resources](https://www.fullstackpython.com/best-python-resources.html)
+    page.
 
 
 ### Future Work & Ideas
