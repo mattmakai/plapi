@@ -86,7 +86,9 @@ data is approved it'll be live for all Plapi requests.
 
 1. **Where can I learn more about building web apps and APIs with Python?**
 
-    [Full Stack Python](https://www.fullstackpython.com), especially the
+    [Full Stack Python](https://www.fullstackpython.com). Check out the
+    [table of contents](https://www.fullstackpython.com/table-of-contents.html)
+    for all topics or explore other links on the 
     [Best Python Resources](https://www.fullstackpython.com/best-python-resources.html)
     page.
 
