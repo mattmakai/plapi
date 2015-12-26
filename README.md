@@ -1,4 +1,4 @@
-# Programming Languages Web API
+# Programming Languages Web API (Plapi)
 Plapi is a 
 [web application programming interface (API)](https://www.fullstackpython.com/application-programming-interface.html) 
 for curated data about programming languages, code libraries and tutorials. 
@@ -43,19 +43,19 @@ can do for you.
   GET [http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010]([http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010)
 
 
-What languages are open sourced under the MIT license?
+* **What languages are open sourced under the MIT license?**
 
-    http://api.plapi.io/programming-languages/?license=MIT
-
-
-What code libraries are useful for deploying code?
-
-    http://api.plapi.io/libraries/?tags=deployment
+  GET [http://api.plapi.io/programming-languages/?license=MIT](http://api.plapi.io/programming-languages/?license=MIT)
 
 
-List all the code libraries for either django OR flask.
+* **What code libraries are useful for deploying code?**
 
-    http://api.plapi.io/libraries/?tags=django,flask
+  GET [http://api.plapi.io/libraries/?tags=deployment](http://api.plapi.io/libraries/?tags=deployment)
+
+
+* **List all the code libraries for either Django OR Flask.**
+
+  GET [http://api.plapi.io/libraries/?tags=django,flask](http://api.plapi.io/libraries/?tags=django,flask)
 
 
 ## Adding new data
