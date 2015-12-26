@@ -1,0 +1,37 @@
+<div class="col-md-offset-1 col-md-3" id="sidebar">
+  {% if page %}
+  {% include "sponsor.html" %}
+  <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-head"><a href="/table-of-contents.html" style="color: #fff;">Table of Contents</a></h3>
+      </div>
+      <div class="list-group">
+          {% for p in pages|sort(attribute='sort-order') %}
+              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}" style='font-family: "Helvetica Neue",sans-serif;'>{{ p.title }}</a>
+          {% endfor %}
+      </div>
+  </div>
+  {% endif %}
+  <div class="panel panel-success">
+      <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sort-order') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
+      <div class="panel-body">
+          {% if not page %}
+          View the 
+          <a href="/table-of-contents.html">table of contents</a> if you're
+          looking for a specific Python topic.
+          <hr/>
+          {% endif %}
+          Major updates are tweeted via
+          <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
+          <hr/>
+          Need more detailed tutorials than you see here?
+          <a href="http://www.deploypython.com/">Learn more about The Full Stack Python Guide to Deployments book.</a>
+          {% if not page %}
+          <hr/>
+          <a href="/">Full Stack Python</a> is an open book that explains
+          concepts in plain language and provides the most helpful resources 
+          on those topics.
+          {% endif %}
+      </div>
+  </div>
+</div>

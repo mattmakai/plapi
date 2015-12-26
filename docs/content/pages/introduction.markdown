@@ -1,9 +1,10 @@
 title: Introduction
 category: page
 slug: introduction
-meta: The Programming Languages web API (PLAPI) provides a programmatic method for learning software development.
+meta: The Programming Languages web API (PLAPI) provides programmatic access to software development learning resources.
 
 
 # Introduction
-The Programming Languages web API (PLAPI) provides a programmatic method for 
-learning software development.
+The [Programming Languages web API](http://api.plapi.io) (Plapi) provides 
+programmatic access to curated software development code libraries and 
+tutorials.
