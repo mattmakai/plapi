@@ -12,7 +12,6 @@ class APIRootTest(APITestCase):
     def setUp(self):
         self.factory = APIRequestFactory()
 
-
     def test_api_root(self):
         request = self.factory.get('/')
         response = api_root(request)
@@ -29,10 +28,8 @@ class ProgrammingLanguagesTest(APITestCase):
     def setUp(self):
         self.factory = APIRequestFactory()
 
-
     def tearDown(self):
         self.factory = None
-
 
     def test_create_language(self):
         request = self.factory.post('/programming-languages/', emerald,
@@ -48,4 +45,16 @@ class ProgrammingLanguagesTest(APITestCase):
         # not approved, so should not be found, API returns 404
         self.assertEquals(response_lang.status_code, 404)
 
+
+class ProgrammingLanguagesFixtureTests(APITestCase):
+    fixtures = ['test_data.json']
+
+    def setUp(self):
+        self.factory = APIRequestFactory()
+
+    def tearDown(self):
+        self.factory = None
+
+    def test_python_exists(self):
+        self.assertTrue(Language.objects.filter(name='Python').count(), 1)
 

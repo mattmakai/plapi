@@ -31,6 +31,20 @@ class LanguageList(APIView):
         by filtering against a `username` query parameter in the URL.
         """
         queryset = Language.objects.filter(is_visible=True)
+        tags = self.request.query_params.get('tags', None)
+        if tags is not None:
+            tags_list = tags.strip().split(',')
+            tags = Tag.objects.filter(name__in=tags_list)
+            if not tags:
+                return None
+            language_type = ContentType.objects.get(app_label="languages",
+                                                   model="language")
+            object_ids = TaggedItem.objects.filter(content_type=language_type,
+                                                   tag_id__in=tags).\
+                                                   distinct('object_id').\
+                                                   values_list('object_id',
+                                                               flat=True)
+            queryset = queryset.filter(pk__in=object_ids)
         year_gte = self.request.query_params.get('year-gte', None)
         if year_gte is not None:
             queryset = queryset.filter(year_appeared__gte=year_gte)
@@ -40,10 +54,13 @@ class LanguageList(APIView):
         return queryset
 
     def get(self, request, format=None):
-        languages = self.get_queryset().order_by('name')
-        serializer = LanguageSerializer(languages, many=True,
-                                        context={'request': request})
-        return Response(serializer.data)
+        languages = self.get_queryset()
+        if languages:
+            languages = self.get_queryset().order_by('name')
+            serializer = LanguageSerializer(languages, many=True,
+                                            context={'request': request})
+            return Response(serializer.data)
+        return Response([])
 
 
 class LanguageDetail(APIView):
@@ -85,7 +102,7 @@ class LibraryList(APIView):
         """
         queryset = Library.objects.filter(is_visible=True)
         tags = self.request.query_params.get('tags', None)
-        if tags is not None:
+        if tags:
             tags_list = tags.strip().split(',')
             tags = Tag.objects.filter(name__in=tags_list)
             if not tags:
