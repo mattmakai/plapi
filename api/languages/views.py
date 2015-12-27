@@ -26,32 +26,15 @@ def api_root(request, format=None):
 
 class LanguageList(APIView):
     def get_queryset(self):
-        """
-        Optionally restricts the returned purchases to a given user,
-        by filtering against a `username` query parameter in the URL.
-        """
         queryset = Language.objects.filter(is_visible=True)
-        tags = self.request.query_params.get('tags', None)
-        if tags is not None:
-            tags_list = tags.strip().split(',')
-            tags = Tag.objects.filter(name__in=tags_list)
-            if not tags:
-                return None
-            language_type = ContentType.objects.get(app_label="languages",
-                                                   model="language")
-            object_ids = TaggedItem.objects.filter(content_type=language_type,
-                                                   tag_id__in=tags).\
-                                                   distinct('object_id').\
-                                                   values_list('object_id',
-                                                               flat=True)
-            queryset = queryset.filter(pk__in=object_ids)
         year_gte = self.request.query_params.get('year-gte', None)
         if year_gte is not None:
             queryset = queryset.filter(year_appeared__gte=year_gte)
         year_lte = self.request.query_params.get('year-lte', None)
         if year_lte is not None:
             queryset = queryset.filter(year_appeared__lte=year_lte)
-        return queryset
+        tags = self.request.query_params.get('tags', None)
+        return filter_queryset_by_tags(tags, queryset, "language")
 
     def get(self, request, format=None):
         languages = self.get_queryset()
@@ -96,26 +79,9 @@ class LanguageDetail(APIView):
 
 class LibraryList(APIView):
     def get_queryset(self):
-        """
-        Optionally restricts the returned purchases to a given user,
-        by filtering against a `username` query parameter in the URL.
-        """
         queryset = Library.objects.filter(is_visible=True)
         tags = self.request.query_params.get('tags', None)
-        if tags:
-            tags_list = tags.strip().split(',')
-            tags = Tag.objects.filter(name__in=tags_list)
-            if not tags:
-                return None
-            library_type = ContentType.objects.get(app_label="languages",
-                                                   model="library")
-            object_ids = TaggedItem.objects.filter(content_type=library_type,
-                                                   tag_id__in=tags).\
-                                                   distinct('object_id').\
-                                                   values_list('object_id',
-                                                               flat=True)
-            queryset = queryset.filter(pk__in=object_ids)
-        return queryset
+        return filter_queryset_by_tags(tags, queryset, "library")
 
     def get(self, request, format=None):
         libraries = self.get_queryset()
@@ -146,13 +112,19 @@ class LibraryDetail(APIView):
 
 
 class TutorialList(APIView):
-    queryset = Tutorial.objects.filter(is_visible=True)
+    def get_queryset(self):
+        queryset = Tutorial.objects.filter(is_visible=True)
+        tags = self.request.query_params.get('tags', None)
+        return filter_queryset_by_tags(tags, queryset, "tutorial")
 
     def get(self, request, format=None):
-        tutorials = Tutorial.objects.filter(is_visible=True)
-        serializer = TutorialSerializer(tutorials, many=True,
-                                        context={'request': request})
-        return Response(serializer.data)
+        tutorials = self.get_queryset()
+        if tutorials is not None:
+            tutorials.order_by('name')
+            serializer = TutorialSerializer(tutorials, many=True,
+                                            context={'request': request})
+            return Response(serializer.data)
+        return Response([])
 
 
 class TutorialDetail(APIView):
@@ -171,4 +143,26 @@ class TutorialDetail(APIView):
         serializer = TutorialSerializer(tutorial,
                                         context={'request': request})
         return Response(serializer.data)
+
+
+def filter_queryset_by_tags(tags, queryset, model_name):
+    """
+        Takes in a comma-separated list of tags and filters the queryset
+        based on a content type model by those tags. Returns None if no
+        tags are passed in.
+    """
+    if tags is not None:
+        tags_list = tags.strip().split(',')
+        tags = Tag.objects.filter(name__in=tags_list)
+        if not tags:
+            return None
+        content_type = ContentType.objects.get(app_label="languages",
+                                               model=model_name)
+        object_ids = TaggedItem.objects.filter(content_type=content_type,
+                                               tag_id__in=tags).\
+                                               distinct('object_id').\
+                                               values_list('object_id',
+                                                           flat=True)
+        queryset = queryset.filter(pk__in=object_ids)
+    return queryset
 
