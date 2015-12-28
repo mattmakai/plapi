@@ -38,6 +38,8 @@ class Language(models.Model):
     homepage_url = models.URLField(max_length=1024, blank=True)
     summary = models.TextField()
     year_appeared = models.IntegerField(null=True, blank=True)
+    source_code_url = models.URLField(max_length=2048, blank=True,
+                                      default="")
     logo_url = models.URLField(max_length=2048, blank=True)
     is_visible = models.BooleanField(default=False)
 
