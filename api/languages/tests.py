@@ -58,3 +58,8 @@ class ProgrammingLanguagesFixtureTests(APITestCase):
     def test_python_exists(self):
         self.assertTrue(Language.objects.filter(name='Python').count(), 1)
 
+    def test_language_detail_api_call(self):
+        response = self.client.get('/programming-languages/ruby/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('www.ruby-lang.org' in response.data['homepage_url'])
+
