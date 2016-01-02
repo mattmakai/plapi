@@ -11,15 +11,15 @@ reference for learning about what the API contains.
 ## Endpoints
 There are currently three endpoints:
 
-1. [/libraries](http://api.plapi.io/libraries/) - packages of reuseable code 
+1. [/libraries](https://api.plapi.io/libraries/) - packages of reuseable code 
    such as a web framework or data analysis tool
 
-1. [/programming-languages](http://api.plapi.io/programming-languages/) -
+1. [/programming-languages](https://api.plapi.io/programming-languages/) -
    a named programming language such as 
-   [Python](http://api.plapi.io/programming-languages/python) or 
-   [Elixir](http://api.plapi.io/programming-languages/elixir)
+   [Python](https://api.plapi.io/programming-languages/python) or 
+   [Elixir](https://api.plapi.io/programming-languages/elixir)
 
-1. [/tutorials](http://api.plapi.io/tutorials/) - articles or blog posts
+1. [/tutorials](https://api.plapi.io/tutorials/) - articles or blog posts
    that help readers learn about a programming language and/or code library
 
 
@@ -34,28 +34,28 @@ can do for you.
 
 * **List all programming languages that first appeared starting in 2001.**
 
-  GET [http://api.plapi.io/programming-languages/?year-gte=2001](http://api.plapi.io/programming-languages/?year-gte=2001)
+  GET [https://api.plapi.io/programming-languages/?year-gte=2001](https://api.plapi.io/programming-languages/?year-gte=2001)
 
 
 * **List all programming languages that first appeared starting in 2001,
   but no later than 2010.**
 
-  GET [http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010]([http://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010)
+  GET [https://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010]([https://api.plapi.io/programming-languages/?year-gte=2001&year-lte=2010)
 
 
 * **What languages are open sourced under the MIT license?**
 
-  GET [http://api.plapi.io/programming-languages/?license=MIT](http://api.plapi.io/programming-languages/?license=MIT)
+  GET [https://api.plapi.io/programming-languages/?license=MIT](https://api.plapi.io/programming-languages/?license=MIT)
 
 
 * **What code libraries are useful for deploying code?**
 
-  GET [http://api.plapi.io/libraries/?tags=deployment](http://api.plapi.io/libraries/?tags=deployment)
+  GET [https://api.plapi.io/libraries/?tags=deployment](https://api.plapi.io/libraries/?tags=deployment)
 
 
 * **List all the code libraries for either Django OR Flask.**
 
-  GET [http://api.plapi.io/libraries/?tags=django,flask](http://api.plapi.io/libraries/?tags=django,flask)
+  GET [https://api.plapi.io/libraries/?tags=django,flask](https://api.plapi.io/libraries/?tags=django,flask)
 
 
 ## Adding new data
