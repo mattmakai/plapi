@@ -23,9 +23,9 @@ There are currently three endpoints:
    that help readers learn about a programming language and/or code library
 
 
-You can use these endpoints as an unauthenticated user at a rate of 5 
+You can use these endpoints as an unauthenticated user at a rate of 15 
 requests per minute, or grab an API key (coming soon) to bump the limit up 
-to 20 requests per minute.
+to 30 requests per minute.
 
 
 ## Searching
